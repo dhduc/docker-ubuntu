@@ -22,10 +22,9 @@ RUN add-apt-repository ppa:webupd8team/java -y && \
 RUN apt-get install nginx -y
 
 # PHP
-RUN add-apt-repository ppa:ondrej/php -y 
-RUN apt-get update 
-RUN apt-get install --allow-unauthenticated -y php7.0 php7.0-fpm
-RUN apt-get install --allow-unauthenticated -y libapache2-mod-php7.0 php7.0-dev php7.0-mysql php7.0-cli php7.0-gd php7.0-json -y
+RUN apt-get update \
+    && apt-get -y --no-install-recommends install php7.0-fpm
+# RUN apt-get install --allow-unauthenticated -y libapache2-mod-php7.0 php7.0-dev php7.0-mysql php7.0-cli php7.0-gd php7.0-json -y
 
 # Composer
 RUN apt-get install curl -y 
