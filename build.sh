@@ -1,5 +1,5 @@
 #!/bin/bash
 
-IMAGE='ducdh/ubuntu'
+IMAGE='huuduc2107/ubuntu'
 echo "Start build $IMAGE image"
 docker build -t  $IMAGE .

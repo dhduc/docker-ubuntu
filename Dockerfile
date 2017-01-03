@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 MAINTAINER Duc Dao
 
+ENV TERM xterm
+
 # Update
 RUN apt-get update 
 RUN apt-get upgrade -y 
@@ -46,7 +48,6 @@ RUN apt-get install vim -y
 RUN apt-get install sshpass -y
 RUN apt-get install htop -y
 RUN apt-get install ranger -y
-RUN apt-get install cmatrix -y
 RUN apt-get install sl -y
 RUN apt-get install nmap -y
 RUN apt-get install tmux -y
