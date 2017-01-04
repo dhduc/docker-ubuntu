@@ -58,7 +58,10 @@ RUN apt-get install lolcat -y
 RUN apt-get install boxes -y
 
 # Restart
-RUN service nginx restart
+RUN chown `whoami`:www-data -R /var/www/html
+RUN find /var/www/html -type d -exec chmod 775 {} \;
+RUN find /var/www/html -type f -exec chmod 664 {} \;
+RUN service nginx start
 RUN service php7.0-fpm restart
-RUN apt-get update 
-RUN apt-get upgrade -y 
+
+EXPOSE 8000
