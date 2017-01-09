@@ -28,6 +28,10 @@ RUN apt-get update \
     && apt-get -y --no-install-recommends install php7.0-fpm
 # RUN apt-get install --allow-unauthenticated -y libapache2-mod-php7.0 php7.0-dev php7.0-mysql php7.0-cli php7.0-gd php7.0-json -y
 
+# MySQL
+RUN apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get -yq install mysql-server
+
 # Composer
 RUN apt-get install curl -y 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
