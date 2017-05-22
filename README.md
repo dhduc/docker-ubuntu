@@ -3,7 +3,7 @@ Ubuntu image for web development
 
 ## Feature:
 
-- Based from Ubuntu 16.04.
+- Based on Ubuntu 16.04.
 - LEMP stack.
 - Java, Python, Ruby, NodeJS.
 - Utilities: git, ssh, zsh, curl, wget, vim, tmux, grunt.

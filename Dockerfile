@@ -24,9 +24,8 @@ RUN add-apt-repository ppa:webupd8team/java -y && \
 RUN apt-get install nginx -y
 
 # PHP
-RUN apt-get update \
-    && apt-get -y --no-install-recommends install php7.0-fpm
-# RUN apt-get install --allow-unauthenticated -y libapache2-mod-php7.0 php7.0-dev php7.0-mysql php7.0-cli php7.0-gd php7.0-json -y
+RUN apt-get update && apt-get -y --no-install-recommends install php7.0-fpm
+RUN apt-get install --allow-unauthenticated php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-gd libcurl3 php7.0-intl php7.0-xsl php7.0-zip php7.0-mbstring  php7.0-dom php7.0-simplexml php7.0-xml -y
 
 # MySQL
 RUN apt-get update && \
