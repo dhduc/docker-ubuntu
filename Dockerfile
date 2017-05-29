@@ -66,5 +66,6 @@ RUN find /var/www/html -type d -exec chmod 775 {} \;
 RUN find /var/www/html -type f -exec chmod 664 {} \;
 RUN service nginx start
 RUN service php7.0-fpm restart
+RUN service mysql start
 
 EXPOSE 8000
